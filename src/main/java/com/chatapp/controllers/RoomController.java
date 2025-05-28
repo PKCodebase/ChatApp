@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/rooms")
+@CrossOrigin(origins = "http://localhost:3000")
 public class RoomController {
 
     private static final Logger logger = LoggerFactory.getLogger(RoomController.class);

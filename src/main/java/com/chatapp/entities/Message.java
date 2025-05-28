@@ -31,6 +31,11 @@ public class Message {
     @JoinColumn(name = "room_id")
     private Room room;
 
+    public Message(){
+
+    }
+
+
     private Message(String sender,String content){
 
         this.sender = sender;
@@ -38,6 +43,45 @@ public class Message {
         this.timestamp = LocalDateTime.now();
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getSender() {
+        return sender;
+    }
+
+    public void setSender(String sender) {
+        this.sender = sender;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public LocalDateTime getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(LocalDateTime timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
+    }
 }
 
 //package com.chatapp.entities;
